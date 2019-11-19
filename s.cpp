@@ -1,19 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-//#include <conio.h>
-
+#include<cstdlib>
 using namespace std;
 
-//Structure defining
-
-//For students
 struct student
 {
  string fname;//for student first name
  string lname;//for student last name
- string Registration;//for Registration No number
- string classes;//for class info
+ int Registration;//for Registration No number
+ int classes;//for class info
 }studentData;//Variable of student type
 
 //For teachers
@@ -31,7 +27,10 @@ struct teacher
  string blod_grp;//Bool Group 
  string serves;//Number of serves in School
 
-}tech[50];
+}tech[50];//Variable of teacher type
+
+///////////////////////////////////////////////////
+//Main function
 
 int main()
 {
@@ -43,7 +42,7 @@ string srch;
 
 while(1)//outer loop
 { 
- system("clear");
+ //system("clear");
 
 //Level 1-Display process 
  cout<<"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\";
@@ -123,9 +122,9 @@ if(studentData.fname==find)
  cout<<"First Name: "<<studentData.fname<<endl;
  cout<<"Last Name: "<<studentData.lname<<endl;
 
- getline(f2,studentData.Registration);
+
  cout<<"Registration No number: "<<studentData.Registration<<endl;
- getline(f2,studentData.classes);
+
  cout<<"Class: "<<studentData.classes<<endl<<endl;
 }
 
@@ -157,7 +156,7 @@ case '2'://Teachers biodata
 { 
 while(1)//inner loop-2
 { 
-system("clear");//Clear screen
+//system("clear");//Clear screen
 //Level-2 Display process
 cout<<"\t\t\tTEACHERS INFORMATION AND BIODATA SECTION\n\n\n";
 cout<<"Enter your choice: "<<endl;
@@ -208,7 +207,7 @@ for(i=0;choice!='n'&& choice!='N';i++)
  }//if
 }//for loop
 //for finding through name 
-system("clear");
+//system("clear");
 
 
 
@@ -252,10 +251,6 @@ for( j=0;((j<i)||(!t2.eof()));j++)
   cout<<"Enter Lecture(per Week): "<<tech[j].lec<<endl;
   getline(t2,tech[j].pay);
   cout<<"pay: "<<tech[j].pay<<endl;
-
-  getline(t2,tech[j].addrs);
-  cout<<"Address: "<<tech[j].addrs<<endl;
-
   getline(t2,tech[j].cel_no);
   cout<<"Phone Number: "<<tech[j].cel_no<<endl;
 
@@ -278,6 +273,7 @@ continue;//Control pass to inner loop-2
 
 case '3'://Jump to main 
 {
+  system("clear");
 break;//inner switch
 }//case 3
 
