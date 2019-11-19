@@ -31,10 +31,7 @@ struct teacher
  string blod_grp;//Bool Group 
  string serves;//Number of serves in School
 
-}tech[50];//Variable of teacher type
-
-///////////////////////////////////////////////////
-//Main function
+}tech[50];
 
 int main()
 {
@@ -69,7 +66,7 @@ case '1': //Student
  { 
 while(1)//inner loop-1
 { 
-system("cls");//Clear screen
+//system("cls");//Clear screen
 //Level-2 display
 cout<<"\t\t\tSTUDENTS INFORMATION AND BIO DATA SECTION\n\n\n";
 cout<<"Enter your choice: "<<endl;
